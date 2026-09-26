@@ -5,7 +5,7 @@ Eksperimen awal untuk membandingkan dua pendekatan klasifikasi sentimen ulasan p
 1. **Model klasik**: TF-IDF + Logistic Regression (Scikit-learn), dilatih dari dataset ulasan.
 2. **LLM API**: Gemini dengan prompt zero-shot, tanpa proses training.
 
-Notebook lengkap: [notebook/starter_notebook.ipynb](notebook/starter_notebook.ipynb)
+Notebook lengkap: [notebook/experiment_notebook.ipynb](notebook/experiment_notebook.ipynb)
 
 ## 1. Problem Statement
 
@@ -40,7 +40,7 @@ Bentuk label 1/0
 │   ├── klasik_metrik.csv / llm_metrik.csv
 │   └── klasik_confusion_matrix.csv / llm_confusion_matrix.csv
 ├── notebook/
-│   └── starter_notebook.ipynb           # eksperimen, evaluasi, analisis & rekomendasi
+│   └── experiment_notebook.ipynb        # eksperimen, evaluasi, analisis & rekomendasi
 ├── requirements.txt
 └── README.md
 ```
@@ -48,7 +48,7 @@ Bentuk label 1/0
 ## 3. Cara Menjalankan
 
 **Google Colab**
-1. Upload `notebook/starter_notebook.ipynb` dan `data/customer_reviews_sentiment.csv` (lewat panel Files).
+1. Upload `notebook/experiment_notebook.ipynb` dan `data/customer_reviews_sentiment.csv` (lewat panel Files).
 2. Tambahkan API key Gemini di 🔑 **Secrets** dengan nama `GEMINI_API_KEY`, lalu aktifkan *Notebook access*.
 3. Jalankan semua cell dari atas (Runtime → Run all).
 
@@ -58,7 +58,7 @@ Bentuk label 1/0
    pip install -r requirements.txt
    ```
 2. Simpan API key Gemini di environment variable `GEMINI_API_KEY`.
-3. Buka `notebook/starter_notebook.ipynb` dan jalankan semua cell. Path dataset (`../data/...`) dan API key terdeteksi otomatis.
+3. Buka `notebook/experiment_notebook.ipynb` dan jalankan semua cell. Path dataset (`../data/...`) dan API key terdeteksi otomatis.
 
 ## 4. Setup Eksperimen
 
@@ -96,4 +96,4 @@ Dari sisi akurasi, eksperimen ini **belum bisa menentukan pendekatan yang lebih 
 
 **Rekomendasi:** gunakan **model klasik untuk produksi jangka panjang**, dengan syarat tim menyiapkan dataset yang lebih besar dan beragam. Gunakan **LLM API** jika fitur perlu cepat jadi tanpa menyiapkan dataset. Kombinasi keduanya juga bisa dipertimbangkan: Gemini membantu memberi label awal (dicek manusia), lalu hasilnya dipakai untuk melatih model klasik.
 
-Analisis trade-off, limitation, dan rekomendasi lengkap ada di Section 7 dan 8 [notebook](notebook/starter_notebook.ipynb).
+Analisis trade-off, limitation, dan rekomendasi lengkap ada di Section 7 dan 8 [notebook](notebook/experiment_notebook.ipynb).
