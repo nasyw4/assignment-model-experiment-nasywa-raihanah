@@ -1,0 +1,3 @@
+Pendekatan,Accuracy,Precision,Recall,F1-Score,Latency/ulasan (ms)
+Model Klasik (TF-IDF + Logistic Regression),1.0,1.0,1.0,1.0,0.06
+"LLM API (gemini-3.1-flash-lite, zero-shot)",1.0,1.0,1.0,1.0,4726.649
